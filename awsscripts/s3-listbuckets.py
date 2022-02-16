@@ -1,7 +1,9 @@
 import boto3
 
-s3 = boto3.resource('s3')
+s3buck = boto3.resource('s3')
+buck_name = 'setting-scripts'
+
 
 # Print out bucket names
-for bucket in s3.buckets.all():
+for bucket in s3buck.buckets.all():
     print(bucket.name)
